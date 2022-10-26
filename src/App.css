@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+body {
+  background-color: #0f1014;
+  color: rgb(255, 255, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.max-center {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100px; 
+  border: 1px none white;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+   
+}
+
+.header-content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px none white;
+  
+}
+
+.hero {
+  position: relative;
+  min-height: 500px;
+  background-position: top center;
+  background-size: cover;
+  display:flex;
+  align-items: flex-end;
+}
+
+.hero-content {
+  max-width: 70%;
+  padding-bottom: 100px;
+}
+
+.hero-title {
+  font-size: 72px;
+  margin: 0px;
+}
+
+.youtube-container {
+  position:absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  background-color: #0f1014;
   color: white;
+  outline: none;
+  border: 1px solid white;
+  padding: 10px 15px;
+  cursor: pointer;
+
 }
 
-.App-link {
-  color: #61dafb;
+.button--search {
+  padding: 0 10px;
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button--logout {
+  padding: 0 10px;
 }
+
+.button--close {
+  position: absolute;
+  z-index: 25;
+  bottom: 30px;
+  left: 15px;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 15px;
+  grid-template-columns:  repeat(6, 1fr) ;
+  padding: 15px;
+  
+  background-color: #000000;
+
+}
+
+.movie-cover {
+  width: 100%;
+}
+
+.movie-placeholder {
+  min-height: 225px;
+  
+  background-color: white;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+input[type='text']{
+  color: #0f1014;
+}
+

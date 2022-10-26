@@ -15,7 +15,7 @@ const Signup = () => {
         setError('');
         try {
             await createUser(email, password);
-            navigate('/account')
+            navigate('/main')
         } catch (e) {
             setError(e.message);
             console.log(e.message);
@@ -33,11 +33,11 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
             <div className='flex flex-col py-2'>
                 <label className='py-2 font-medium'>Email address</label>
-                <input onChange={(e) => setEmail(e.target.value)} className='border p-3' type={'email'} />
+                <input onChange={(e) => setEmail(e.target.value)} className='border p-3 text-stone-600' type={'email'} />
             </div>
             <div className='flex flex-col py-2'>
                 <label className='py-2 font-medium'>Password</label>
-                <input onChange={(e) => setPassword(e.target.value) } className='border p-3' type={'password'} />
+                <input onChange={(e) => setPassword(e.target.value) } className='border p-3 text-stone-600' type={'password'} />
             </div>
             <button className='border border-blue-500 bg-blue-600 hover:bg-blue-500 w-full p-4 my-2 text-white'>Sign up</button>
         </form>
